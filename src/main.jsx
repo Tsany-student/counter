@@ -17,7 +17,7 @@ const store = configureStore({
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/counter">
         <Routes>
           <Route path="/" element={<h1>Home</h1>} />
           <Route path="/counter" element={<Counter />} />
