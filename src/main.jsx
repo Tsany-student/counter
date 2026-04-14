@@ -6,7 +6,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import "./index.css";
 import Counter from "./Counter";
-import counterReducer from "./counterSlice";
+import counterReducer from "./counterSlice"; 
 
 const store = configureStore({
   reducer: {
@@ -17,7 +17,7 @@ const store = configureStore({
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/counter">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<h1>Home</h1>} />
           <Route path="/counter" element={<Counter />} />
